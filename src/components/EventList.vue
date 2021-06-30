@@ -4,9 +4,9 @@
     <div v-for="event in events" :key="event.id" class="divgrande">
       <div class="uno" >
         <div class="max-w-lg w-full rounded-lg shadow-lg p-4 m-3 bg-indigo-800">
-          <h3 class="font-semibold text-lg text-white tracking-wide">
+          <router-link to="/bookedbyusers/{event.id}"><h3 class="font-semibold text-lg text-white tracking-wide">
             {{ event.title }}
-          </h3>
+          </h3></router-link>
           <p class="text-white my-1">
             {{ event.description }}
           </p>
