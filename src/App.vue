@@ -2,7 +2,7 @@
   <div id="nav" class="navbar navbar-expand-lg fixed-top row">
     <router-link to="/">Home</router-link> |
     <router-link to="/eventlist">Event List</router-link> |
-     <simple-component/>
+     
   </div>
   <router-view/>
 </template>
