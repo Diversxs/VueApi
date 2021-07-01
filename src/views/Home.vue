@@ -3,7 +3,6 @@
     <div class="flex content-center flex-col items-center">
     <h1 class="h1">Welcome to Agorax Events</h1>
     <h2 class="h2">Here we are to show our experiments toying with API's. </h2>
-    <img src="../assets/Logo.png" alt="">
   </div>
   </div>
 </template>
