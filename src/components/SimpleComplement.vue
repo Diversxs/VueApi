@@ -1,24 +1,33 @@
 <template>
   <div class="about">
-  <button v-if="isShown" @click="toggleUserList()">🡠</button>
-  <div v-if="!isShown">
-    <div v-for="event in events" v-bind:key="event" class="divgrande">
-      <div class="uno">
-        <div class="max-w-lg w-full rounded-lg shadow-lg p-4 m-3 bg-indigo-800">
-          <h3 class="font-semibold text-lg text-white tracking-wide">
-            {{ event.title }}
-          </h3>
-          <p class="text-white my-1">
-            {{ event.description }}
-          </p>
-          <p class="text-white my-1">Capacity: {{ event.capacity }}</p>
-          <button class="button" @click="getId(event.id); toggleUserList()">Show me users</button>
+    <button v-if="isShown" @click="toggleUserList()">🡠</button>
+    <div v-if="!isShown">
+      <div v-for="event in events" v-bind:key="event" class="divgrande">
+        <div class="uno">
+          <div
+            class="max-w-lg w-full rounded-lg shadow-lg p-4 m-3 bg-indigo-800"
+          >
+            <h3 class="font-semibold text-lg text-white tracking-wide">
+              {{ event.title }}
+            </h3>
+            <p class="text-white my-1">
+              {{ event.description }}
+            </p>
+            <p class="text-white my-1">Capacity: {{ event.capacity }}</p>
+            <button
+              class="button"
+              @click="
+                getId(event.id);
+                toggleUserList();
+              "
+            >
+              Show me users
+            </button>
+          </div>
         </div>
-      </div> 
-      
+      </div>
     </div>
-    </div>
-      <UserList :events="events" :subscribers="subscribers" v-if="isShown" />
+    <UserList :subscribers="subscribers" v-if="isShown" />
   </div>
 </template>
 
@@ -36,7 +45,7 @@
       return {
         events: [],
         subscribers: [],
-        isShown: false 
+        isShown: false
       };
     },
     mounted() {
@@ -59,7 +68,7 @@
       },
 
       toggleUserList(){
-        this.isShown = !this.isShown; 
+        this.isShown = !this.isShown;
       }
     },
   };
@@ -71,6 +80,7 @@
     align-items: center;
     justify-content: center;
     margin: 15px;
+  
   }
 
   .uno {
@@ -78,10 +88,11 @@
     width: 400px;
     padding: 20px;
     border-radius: 20px;
+    background-color:rgb(130, 224, 121)
   }
 
   .button {
-    background-color: #4caf50;
+    background-color: #14141d;
     border: none;
     color: white;
     padding: 16px 32px;
